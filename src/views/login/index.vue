@@ -2,7 +2,7 @@
 <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
         <div class="title-container">
-            <h3 class="title">贵州广电推荐系统</h3>
+            <h3 class="title">电子科技大学-智慧教育项目</h3>
         </div>
 
         <el-form-item prop="username">
