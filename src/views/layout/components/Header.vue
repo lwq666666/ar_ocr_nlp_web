@@ -1,8 +1,8 @@
 <template>
 <el-menu class="el-menu-demo" mode="horizontal" background-color="black" @select="handleSelect" text-color="#fff" active-text-color="#ffd04b">
     <el-menu-item index="front-page">首页</el-menu-item>
-    <el-menu-item index="exhibision-page">贵广电项目展示</el-menu-item>
-    <el-menu-item index="console">控制台</el-menu-item>
+    <el-menu-item index="exhibision-page">智能解题系统项目展示</el-menu-item>
+    <!-- <el-menu-item index="console">空白</el-menu-item> -->
     <el-dropdown style="float:right;" trigger="click">
         <div class="avatar-wrapper">
             <img

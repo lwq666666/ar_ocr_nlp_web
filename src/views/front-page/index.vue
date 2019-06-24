@@ -2,49 +2,18 @@
 <div>
     <div>
         <div class="setbg">
-            <h1 style="padding-top:40px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贵州广电·推荐引擎&nbsp;&nbsp;&nbsp;Recommendation Engine</h1>
-            <div>
-                <div style="height:200px;"></div>
-                <img style="width:350px;height:350px;position: relative;float:left;padding-left:40px" src="@/image/2.png"/>
-                <div>
-                    <div style="height:25px;"></div>
-                    <CardFront style="height:300px;position: relative;float:right;"></CardFront>
-                </div>
-            </div>
+            <h1 style="padding-top:40px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电子科技大学·智慧教育项目&nbsp;&nbsp;&nbsp;</h1>
         </div>
-    </div>
-    <div style="background-color:#333;">
-        <div style="height:200px"></div>
-        <div>
-            <h3>精心打造的功能</h3>
-            <div style="margin:auto;width:80%;border-style: outset;background-color:white">
-                <select-front></select-front>
-            </div>
-        </div>
-    </div>
-    <div style="background-color:#333;">
-        <div style="height:100px"></div>
-        <div>
-            <h3>推荐适用场景</h3>
-            <div style="margin:auto;width:80%;border-style: outset;background-color:white">
-                <TabFront></TabFront>
-            </div>
-        </div>
-    </div>
-    <div style="background-color:#333;">
-        <div style="height:100px"></div>
     </div>
 </div>
 </template>
 
 <script>
-import CardFront from "./CardFront.vue";
 import SelectFront from "./SelectFront.vue";
 import TabFront from "./TabFront.vue";
 export default {
     name: "frontpage",
     components: {
-        CardFront,
         SelectFront,
         TabFront
     }
@@ -54,7 +23,7 @@ export default {
 <style scoped>
 .setbg {
     background: url("../../image/1.jpg");
-    height: 520px;
+    height: 700px;
     position: relative;
     width: 100%;
     background-size: contain;

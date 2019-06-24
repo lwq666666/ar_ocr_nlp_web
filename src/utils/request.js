@@ -7,7 +7,7 @@ import axios from 'axios'
 axios.defaults.withCredentials = true
 const service = axios.create({
     // baseURL: process.env.BASE_API, // api 的 base_url
-    timeout: 5000 // request timeout
+    timeout: 500000 // request timeout
 })
 
 service.interceptors.response.use((response) => {
