@@ -1,8 +1,21 @@
 <template>
   <div>
-    <el-main style=" border:8px dotted gray;  background-color: #f5f6f7;height:660px">
-      <el-form :label-position="labelPosition" :model="form" label-width="80px">
-        <el-form-item label="输入题目:">
+    <el-main style=" border:8px dotted gray;  background-color: #f5f6f7;height:680px">
+      <el-form :label-position="labelPosition" :model="form" label-width="60px">
+        <el-form-item label="上传题目图片:"></el-form-item>
+          <el-upload
+                  action="https://jsonplaceholder.typicode.com/posts/"
+                  list-type="picture-card"
+                  :on-preview="handlePictureCardPreview"
+                  :file-list="img_list"
+                  :auto-upload="auto_upload"
+                  :on-remove="handleRemove" >
+            <i class="el-icon-plus"></i>
+          </el-upload>
+        <p> </p>
+        <el-button type="primary" @click="add">开始识别</el-button>
+        <p> </p>
+        <el-form-item label="题目内容:">
           <el-input
             type="textarea"
             :autosize="{ minRows: 2, maxRows: 500}"
@@ -52,7 +65,7 @@ export default {
     return {
       labelPosition: "top",
       form: {
-        question: "",
+        question:"",
         nlp: "",
         java: "",
         precess: ""
@@ -60,6 +73,27 @@ export default {
     };
   },
   methods: {
+    add(){
+      /*let loadingInstance = Loading.service({
+        fullscreen: true,
+        text: "拼命解题中"
+      });
+
+      reasoning(this.form.question).then(response => {
+        if (response.code == 200) {
+          this.$notify({
+            title: "识别成功",
+            message: response.msg,
+            type: "success"
+          });*/
+      this.form.question = "sinA=1,求A";
+          /*this.$nextTick(() => {
+            // 以服务的方式调用的 Loading 需要异步关闭
+            loadingInstance.close();
+          });
+        }
+      });*/
+    },
     onSubmit() {
       let loadingInstance = Loading.service({
         fullscreen: true,
