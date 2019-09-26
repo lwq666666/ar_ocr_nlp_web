@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+npm update
 npm install
 ```
 
