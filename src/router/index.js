@@ -62,6 +62,11 @@ export const asyncRouterMap = [
         name: 'console',
         component: () => import('@/views/console/index'),
       },
+      {
+        path: '/third-page',
+        name: 'third',
+        component: () => import('@/views/third-page/index')
+      },
       sceneRouter,
       exhibisionRouter
     ]
