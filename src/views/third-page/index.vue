@@ -38,12 +38,7 @@
           </el-table>
         </el-form-item>
         <el-form-item>
-          <el-button
-            style="margin-top: 10px"
-            size="small"
-            type="primary"
-            @click="submitUpload"
-          >开始自动批改</el-button>
+          <el-button style="margin-top: 10px" size="small" type="primary" @click="marking">开始自动批改</el-button>
         </el-form-item>
       </el-form>
     </el-main>
@@ -51,8 +46,9 @@
 </template>
 
 <script>
-import {} from "@/api/reasoning";
+import { marking } from "@/api/reasoning";
 import { Loading } from "element-ui";
+import Qs from "qs";
 
 export default {
   data() {
@@ -61,14 +57,32 @@ export default {
       answer: [
         { text: "1", result: true },
         { text: "2", result: false },
-        { text: "3", result: true }
+        { text: "22", result: true }
       ],
       form: {
-        problem: ""
+        problem: "11"
       }
     };
   },
   methods: {
+    marking() {
+      marking().then(response => {
+        console.log(response);
+        if (response.code == 200) {
+          this.$notify({
+            title: "批改成功",
+            message: response.msg,
+            type: "success"
+          });
+          this.answer = response.data;
+          
+          this.$nextTick(() => {
+            // 以服务的方式调用的 Loading 需要异步关闭
+            loadingInstance.close();
+          });
+        }
+      });
+    },
     submitUpload() {
       this.$refs.upload.submit();
     },

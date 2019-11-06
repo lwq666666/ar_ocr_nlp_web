@@ -128,7 +128,7 @@ export default {
                       message: response.msg,
                       type: "success"
                     });*/
-      this.form.question = "sinA=1,求A";
+      this.form.question = "";
       /*this.$nextTick(() => {
                   // 以服务的方式调用的 Loading 需要异步关闭
                   loadingInstance.close();

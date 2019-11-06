@@ -26,11 +26,6 @@ export const constantRouterMap = [
     component: () => import('@/views/errorPage/401'),
     hidden: true
   },
-  {
-    path: '/test',
-    name: "test",
-    component: () => import('@/views/face/FaceRecongnise'),
-  },
 ]
 
 export default new Router({

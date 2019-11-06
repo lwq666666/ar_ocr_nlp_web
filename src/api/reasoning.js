@@ -9,3 +9,14 @@ export function reasoning(problem) {
         }
     })
 }
+
+export function marking(answer, problem) {
+    return request({
+        url: '/reason/marking',
+        method: 'get',
+        params: {
+            answer: answer,
+            problem: problem
+        }
+    })
+}
